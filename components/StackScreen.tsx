@@ -48,7 +48,7 @@ const StackScreen = ({
       style={{
         flex: 1,
         padding: AppTheme.screenPadding,
-        paddingTop: Platform.OS === 'android' ? 50 : 85,
+        paddingTop: Platform.OS === 'android' ? 20 : 85,
         ...style,
       }}
     >
