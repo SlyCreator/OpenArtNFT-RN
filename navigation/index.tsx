@@ -27,6 +27,7 @@ import StackScreen from '../components/StackScreen'
 import CartScreen from '../screens/CartScreen'
 import CheckoutScreen from '../screens/CheckoutScreen'
 import OrderConfirmationScreen from '../screens/OrderConfirmationScreen'
+import ItemDetailsScreen from '../screens/ItemDetailsScreen'
 
 
 
@@ -87,15 +88,15 @@ const Header = (props: NativeStackHeaderProps) => {
 export function RootNavigator({ initialRouteName }: RootNavigationProps) {
   return (
     <Stack.Navigator >
-            <Stack.Screen name="Home" component={BottomTabNavigator}   options={{headerShown:false}}/>
-
-      <Stack.Screen name="Welcome" component={FirstScreen} options={{ headerShown:false}}/>
-      <Stack.Screen name="SignUp" component={SignUpScreen}   options={{headerShown:false}}/>
-      <Stack.Screen name="SignIn" component={SignInScreen}  options={{headerShown:false}} />
-      <Stack.Screen name="Root" component={BottomTabNavigator}   options={{headerShown:false}}/>
-      <Stack.Screen name="Cart" component={CartScreen} options={{title:'Shopping Cart', headerShown:true}} />
-      <Stack.Screen name="Checkout" component={CheckoutScreen} options={{title:'CheckOut',headerShown : true}} />
-      <Stack.Screen name="OrderConfirmation" component={OrderConfirmationScreen} options={{headerShown:false}} />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="ItemDetails" component={ItemDetailsScreen} options={{headerShown:false}} />
+      <Stack.Screen name="Welcome" component={FirstScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="SignIn" component={SignInScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="Cart" component={CartScreen} options={{ title: 'Shopping Cart', headerShown: true }} />
+      <Stack.Screen name="Checkout" component={CheckoutScreen} options={{ title: 'CheckOut', headerShown: true }} />
+      <Stack.Screen name="OrderConfirmation" component={OrderConfirmationScreen} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }
@@ -177,7 +178,7 @@ function BottomTabNavigator() {
             title: 'Home',
             headerShown: false,
             tabBarIcon: ({ color }) => (
-              <View style={{ justifyContent: 'center', alignItems: 'center',...[tw`mb-2`] }}>
+              <View style={{ justifyContent: 'center', alignItems: 'center', ...[tw`mb-2`] }}>
                 <MaterialCommunityIcons name="account-circle" size={20} color={color} />
                 <Text style={{ color, textAlign: 'center' }}>Profile</Text>
               </View>

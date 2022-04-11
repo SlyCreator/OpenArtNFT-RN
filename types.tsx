@@ -21,6 +21,7 @@ export type RootStackParamList = {
   SignUp: undefined
   Welcome: undefined
   ForgotPassword: undefined
+  ItemDetails:undefined
   Success: undefined
   VerifyEmail: undefined
   Home: undefined

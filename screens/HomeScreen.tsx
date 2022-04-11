@@ -5,12 +5,13 @@ import StackScreen from '../components/StackScreen'
 import { Feather } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next'
 import { StackActions, useNavigation } from '@react-navigation/core';
-import { SmallProductCard } from '../components/Cards/ProductCard';
+import { LongProductCard, SmallProductCard, SoldForCard } from '../components/Cards/ProductCard';
 import OpenArtSvg from '../components/svgs/OpenArtSvg';
 import { Ionicons } from '@expo/vector-icons';
 import Input from '../components/InputField'
 import InputField from '../components/InputField'
 import { useState } from 'react'
+import Button from '../components/Button';
 
 
 const data = [
@@ -45,8 +46,8 @@ const HomeScreen = () => {
     const [value, setValue] = useState({
         search: ''
     })
-    const goCart = () => {
-        dispatch(StackActions.push('Cart'))
+    const goToItemDetail = () => {
+        dispatch(StackActions.push('ItemDetails'))
     }
     return (
         <ScrollView style={tw` bg-white`} showsVerticalScrollIndicator={false}>
@@ -57,7 +58,7 @@ const HomeScreen = () => {
                         <Ionicons name="menu-outline" size={30} color="black" />
                     </View>
                     <View>
-                        <Text style={tw`text-lg font-semibold text-center p-4 text-slate-200`}>Discover, collect, and sell</Text>
+                        <Text style={tw`text-lg font-semibold text-center p-4 text-gray-600`}>Discover, collect, and sell</Text>
                         <Text style={tw`text-xl font-bold  text-center `}>Your DIgital Art</Text>
                     </View>
                     <View>
@@ -73,45 +74,49 @@ const HomeScreen = () => {
                             style: styles.input,
                         }} />
                     </View>
-                    <View style={tw`shadow-lg p-2 bg-white rounded-xl`}>
-                        <View>
-                            <Image source={{
-                                uri: 'https://picsum.photos/id/15/200/300',
+                    <LongProductCard onPress={goToItemDetail} />
+                    <View style={tw`py-4 flex-row`}>
+                        <Text style={tw`text-base`}>Reserve Price </Text>
+                        <Text style={tw`font-bold text-xl`}> 1.50 ETH</Text>
+                    </View>
+                    <View>
+                        <Button
+                            title='Place a bid'
+                            titleStyle={{
+                                color: '#FFF',
+                                textTransform: 'none',
+                                fontSize: 14
                             }}
-                                // style={tw`h-48 rounded-xl`}
-                                style={{
-                                    width: 300,
-                                    height: 300,
-                                    borderRadius: 12,
-
+                        />
+                        <Button
+                            outline
+                            title='Login'
+                            titleStyle={{
+                                color: '#000',
+                                textTransform: 'none',
+                                fontSize: 14
+                            }}
+                        />
+                    </View>
+                    <View style={tw`flex-row`}>
+                            <Text style={tw`text-base font-bold`}>Live auctions</Text>
+                            <Button 
+                            outline
+                                title='Login'
+                                titleStyle={{
+                                    color:'#000',
+                                    textTransform:'none',
+                                    fontSize:14
                                 }}
                             />
-                        </View>
-                        <Text style={tw`text-lg py-2 font-bold`}>Silent Wave</Text>
-                        <View style={tw`flex-row`}>
-                            <Image source={{
-                                uri: 'https://picsum.photos/id/15/200/300',
-                            }}
-                                style={tw`h-8 w-8 rounded-3xl`}
-
-                            />
-                            <View>
-                                <Text style={tw`text-sm font-bold`}>Pawel Czerwinski</Text>
-                                <Text style={tw`text-sm text-grap-200`}>Creator</Text>
-                            </View>
-                        </View>
-                        <Feather name="heart" size={24} color="black" />
-                    </View>
-                    <View><Text>button</Text><Text>Button 2</Text></View>
-                    <View><Text>Live autions</Text></View>
-                    <View>
-                        <View><Text>sold Card and buuton</Text></View>
-                        <View><Text>sold Card and buuton</Text></View>
                     </View>
                     <View>
-                        <View><Text>InBid Card and buuton</Text></View>
-                        <View><Text>InCard and buuton</Text></View>
+                        <View>
+                            <LongProductCard  />
+                            <SoldForCard />
+                        </View>
                     </View>
+                   
                     <View>
                         <Text>hot bid</Text>
                     </View>
@@ -119,7 +124,15 @@ const HomeScreen = () => {
                         <Text>Hot Coolection</Text>
                     </View>
                     <View>
-                        <Text>View More</Text>
+                    <Button
+                            outline
+                            title='View more collection'
+                            titleStyle={{
+                                color: '#000',
+                                textTransform: 'none',
+                                fontSize: 14
+                            }}
+                        />
                     </View>
                     <View>
                         <Text>Earn now Card and button</Text>
