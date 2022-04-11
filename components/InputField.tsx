@@ -24,7 +24,7 @@ export interface Props {
 }
 /* eslint-disable  no-nested-ternary */
 
-const Input = React.forwardRef<UiInput, Props>(
+const InputField = React.forwardRef<UiInput, Props>(
   ({ style, errors, inputProps, ...props }, ref) => {
     const theme = useTheme()
     const { t } = useTranslation()
@@ -94,7 +94,7 @@ const Input = React.forwardRef<UiInput, Props>(
   }
 )
 
-export default Input
+export default InputField
 
 const styles = StyleSheet.create({
   input: {
