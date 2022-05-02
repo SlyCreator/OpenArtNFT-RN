@@ -15,18 +15,10 @@ import * as React from 'react'
 import { RootStackParamList } from '../types'
 import { goBack, navigationRef, route } from './globalNavigation'
 import { ColorSchemeName, Pressable, Text, View } from 'react-native'
-import SignUpScreen from '../screens/SignUpScreen'
 import HomeScreen from '../screens/HomeScreen'
-import SignInScreen from '../screens/SignInScreen'
 import FirstScreen from '../screens/FirstScreen'
-import MenuScreen from '../screens/MenuScreen'
-import OrderScreen from '../screens/OrderScreen'
-import ProfileScreen from '../screens/ProfileScreen'
 import tw from 'tailwind-react-native-classnames'
 import StackScreen from '../components/StackScreen'
-import CartScreen from '../screens/CartScreen'
-import CheckoutScreen from '../screens/CheckoutScreen'
-import OrderConfirmationScreen from '../screens/OrderConfirmationScreen'
 import ItemDetailsScreen from '../screens/ItemDetailsScreen'
 
 
@@ -91,13 +83,7 @@ export function RootNavigator({ initialRouteName }: RootNavigationProps) {
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
       <Stack.Screen name="ItemDetails" component={ItemDetailsScreen} options={{headerShown:false}} />
       <Stack.Screen name="Welcome" component={FirstScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="SignIn" component={SignInScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="Cart" component={CartScreen} options={{ title: 'Shopping Cart', headerShown: true }} />
-      <Stack.Screen name="Checkout" component={CheckoutScreen} options={{ title: 'CheckOut', headerShown: true }} />
-      <Stack.Screen name="OrderConfirmation" component={OrderConfirmationScreen} options={{ headerShown: false }} />
-    </Stack.Navigator>
+     </Stack.Navigator>
   )
 }
 
