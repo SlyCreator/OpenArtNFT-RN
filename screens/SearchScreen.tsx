@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-const JoinCommunityScreen = () => {
+const SearchScreen = () => {
     return (
         <View>
             <Text></Text>
@@ -9,4 +9,4 @@ const JoinCommunityScreen = () => {
     )
 }
 
-export default JoinCommunityScreen
+export default SearchScreen

@@ -4,11 +4,13 @@ import { View, Text, ScrollView, Image } from 'react-native'
 import tw from 'tailwind-react-native-classnames'
 import StackScreen from '../components/StackScreen'
 import OpenArtSvg from '../components/svgs/OpenArtSvg'
-
+import { AntDesign } from '@expo/vector-icons';
+import { EvilIcons } from '@expo/vector-icons';
+import EtherscanSvg from '../components/EtherScanSvg'
 const ItemDetailsScreen = () => {
     return (
-        <ScrollView style={tw` bg-white`} showsVerticalScrollIndicator={false}>
-            <StackScreen style={tw`flex-1 bg-white mx-2`}>
+        <ScrollView style={{backgroundColor:'#EDEDED'}}showsVerticalScrollIndicator={false}>
+            <StackScreen style={{backgroundColor:'#EDEDED'}}>
                 <View>
                     <View style={tw`justify-between flex-row`}>
                         <OpenArtSvg />
@@ -28,35 +30,54 @@ const ItemDetailsScreen = () => {
                             }}
                         />
                     </View>
-                    <View>
-                        <Text>Silenet Color</Text>
+                    <View style={tw`py-4 flex-row justify-between`}>
+                        <Text style={tw`text-lg font-bold`}>Silent Color</Text>
+                        <View style={tw`flex-row `}>
+                            <AntDesign name="hearto" size={20} color="black" style={tw`pr-4`} />
+                            <AntDesign name="upload" size={20} color="black" style={tw`pr-4`} />
+
+                        </View>
                     </View>
                     <View>
-                        <Text>@Openart</Text>
+                        <Text style={tw`text-base font-bold`}>@Openart</Text>
                     </View>
                     <View>
-                        <Text>
+                        <Text style={tw`text-sm py-1`}>
                             Together with my design team, we designed this
                             futuristic Cyberyacht concept artwork. We wanted to create
                             something that has not been created yet, so we started to
                             collect ideas of how we imagine the Cyberyacht could look
                             like in the future.
                         </Text>
-                        <View>
-                            <Text>#color</Text>
-                            <Text>#color</Text>
-                            <Text>#color</Text>
+                        <View style={tw`flex-row pr-2 my-2`}>
+                            <Text style={tw`text-sm text-gray-400 border-2 rounded-lg p-0.5 border-gray-400 mr-2`}>#color</Text>
+                            <Text style={tw`text-sm text-gray-400 border-2 rounded-lg p-0.5 border-gray-400 mr-2`}>#circle</Text>
+                            <Text style={tw`text-sm text-gray-400 border-2 rounded-lg p-0.5 border-gray-400 mr-2`}>#black</Text>
+                            <Text style={tw`text-sm text-gray-400 border-2 rounded-lg p-0.5 border-gray-400 mr-2`}>#art</Text>
                         </View>
                     </View>
                     <View>
-                        <View>
-                            <Text>View on EtherScan</Text>
+                        <View style={tw`flex-row justify-between py-4 bg-white rounded px-2`}>
+                            <View style={tw`flex-row`}>
+                                <EtherscanSvg />
+                                <Text style={tw`text-base font-bold ml-4`}>View on Etherscan</Text>
+                            </View>
+                            <EvilIcons name="external-link" size={24} color="black" />
                         </View>
-                        <View>
-                            <Text>View on IPFS</Text>
+                       
+                        <View style={tw`flex-row justify-between py-4 bg-white rounded px-2`}>
+                            <View style={tw`flex-row`}>
+                                <EtherscanSvg />
+                                <Text style={tw`text-base font-bold ml-4`}>View on Etherscan</Text>
+                            </View>
+                            <EvilIcons name="external-link" size={24} color="black" />
                         </View>
-                        <View>
-                            <Text>View on IPFS Metadata</Text>
+                        <View style={tw`flex-row justify-between py-4 bg-white rounded px-2`}>
+                            <View style={tw`flex-row`}>
+                                <EtherscanSvg />
+                                <Text style={tw`text-base font-bold ml-4`}>View on Etherscan</Text>
+                            </View>
+                            <EvilIcons name="external-link" size={24} color="black" />
                         </View>
                     </View>
 
