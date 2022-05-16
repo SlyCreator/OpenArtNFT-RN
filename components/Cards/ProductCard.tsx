@@ -3,14 +3,14 @@ import { TouchableOpacity, View, Image, Text, GestureResponderEvent } from "reac
 import tw from "tailwind-react-native-classnames"
 import { Feather } from '@expo/vector-icons';
 
-export interface ProductCardPros {
+export interface ProductCardProps {
     onPress?(event?: GestureResponderEvent): void
     imageUri?: React.ReactNode | JSX.Element | any
     name?: string
     cost?: string
 }
 
-export const SmallProductCard = ({ name, imageUri, cost, onPress }: ProductCardPros) => {
+export const SmallProductCard = ({ name, imageUri, cost, onPress }: ProductCardProps) => {
     return (
         <TouchableOpacity style={tw`my-2 m-2 bg-white shadow-sm rounded-lg `}>
             <View style={tw``}>
@@ -24,7 +24,7 @@ export const SmallProductCard = ({ name, imageUri, cost, onPress }: ProductCardP
         </TouchableOpacity>
     )
 }
-export const MeduimProductCard = ({ name, imageUri, cost, onPress }: ProductCardPros) => {
+export const MeduimProductCard = ({ name, imageUri, cost, onPress }: ProductCardProps) => {
     return (
         <TouchableOpacity style={tw`mr-5 p-4 rounded-lg bg-white shadow-lg`} onPress={onPress}>
             <View>
@@ -39,7 +39,7 @@ export const MeduimProductCard = ({ name, imageUri, cost, onPress }: ProductCard
     )
 }
 
-export const LongProductCard = ({ name, imageUri, cost, onPress }: ProductCardPros) => {
+export const LongProductCard = ({ name, imageUri, cost, onPress }: ProductCardProps) => {
     return (
         <TouchableOpacity style={tw` `} onPress={onPress}>
             <View style={tw`shadow-lg p-2 bg-white rounded-xl`}>
@@ -80,7 +80,7 @@ export const LongProductCard = ({ name, imageUri, cost, onPress }: ProductCardPr
     )
 }
 
-export const SoldForCard = ({ name, imageUri, cost, onPress }: ProductCardPros) => {
+export const SoldForCard = ({ name, imageUri, cost, onPress }: ProductCardProps) => {
     return (
         <TouchableOpacity style={tw`my-2 m-2 bg-white shadow-sm rounded-lg `}>
             <View>

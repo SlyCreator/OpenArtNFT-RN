@@ -12,7 +12,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 declare global {
   namespace ReactNavigation {
-    interface RootParamList extends RootStackParamList {}
+    interface RootParamList extends RootStackParamList { }
   }
 }
 
@@ -21,17 +21,11 @@ export type RootStackParamList = {
   SignUp: undefined
   Welcome: undefined
   ForgotPassword: undefined
-  ItemDetails:undefined
+  ItemDetails: undefined
   Success: undefined
   VerifyEmail: undefined
   Home: undefined
-  Menu:undefined
-  Order:undefined
-  Profile:undefined
-  Cart:undefined
-  Checkout:undefined
-  OrderConfirmation:undefined
-  TrackOrder:undefined
+  DiscoverCreator: undefined
   Root: NavigatorScreenParams<RootTabParamList> | undefined
 }
 
