@@ -10,11 +10,7 @@ const DiscoverCreatorScreen = () => {
         <ScrollView style={tw` bg-white`} showsVerticalScrollIndicator={false}>
             <StackScreen style={tw`flex-1 bg-white mx-2`}>
                 <View>
-                    <View style={tw`justify-between flex-row`}>
-                        <OpenArtSvg />
-                        <Ionicons name="menu-outline" size={30} color="black" />
-
-                    </View>
+                    
                     <View>
                         <Text>Discover creator</Text>
                         <Text>Follow at least fiver creators to
