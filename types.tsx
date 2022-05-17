@@ -27,6 +27,7 @@ export type RootStackParamList = {
   Home: undefined
   DiscoverCreator: undefined
   Profile:undefined
+  EditProfile:undefined
   Root: NavigatorScreenParams<RootTabParamList> | undefined
 }
 
