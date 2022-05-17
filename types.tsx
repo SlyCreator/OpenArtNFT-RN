@@ -26,6 +26,7 @@ export type RootStackParamList = {
   VerifyEmail: undefined
   Home: undefined
   DiscoverCreator: undefined
+  Profile:undefined
   Root: NavigatorScreenParams<RootTabParamList> | undefined
 }
 

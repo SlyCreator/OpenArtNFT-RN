@@ -21,6 +21,7 @@ import tw from 'tailwind-react-native-classnames'
 import StackScreen from '../components/StackScreen'
 import ItemDetailsScreen from '../screens/ItemDetailsScreen'
 import DiscoverCreatorScreen from '../screens/DiscoverCreatorScreen'
+import ProfileScreen from '../screens/profile/ProfileScreen'
 
 
 
@@ -81,6 +82,7 @@ const Header = (props: NativeStackHeaderProps) => {
 export function RootNavigator({ initialRouteName }: RootNavigationProps) {
   return (
     <Stack.Navigator >
+      <Stack.Screen name="Profile" component={ProfileScreen}  options={{ headerShown: false }} />
       <Stack.Screen name="DiscoverCreator" component={DiscoverCreatorScreen} options={{headerShown:false}}/>
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
       <Stack.Screen name="ItemDetails" component={ItemDetailsScreen} options={{headerShown:false}} />
