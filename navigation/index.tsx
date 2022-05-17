@@ -24,6 +24,7 @@ import DiscoverCreatorScreen from '../screens/DiscoverCreatorScreen'
 import ProfileScreen from '../screens/profile/ProfileScreen'
 import EditProfile from '../screens/profile/EditProfileScreen'
 import EditProfileScreen from '../screens/profile/EditProfileScreen'
+import CreatorProfile from '../screens/profile/CreatorProfile'
 
 
 
@@ -84,6 +85,8 @@ const Header = (props: NativeStackHeaderProps) => {
 export function RootNavigator({ initialRouteName }: RootNavigationProps) {
   return (
     <Stack.Navigator >
+                  <Stack.Screen name="CreatorProfile" component={CreatorProfile}  options={{ headerShown: false }} />
+
             <Stack.Screen name="EditProfile" component={EditProfileScreen}  options={{ headerShown: false }} />
       <Stack.Screen name="Profile" component={ProfileScreen}  options={{ headerShown: false }} />
       <Stack.Screen name="DiscoverCreator" component={DiscoverCreatorScreen} options={{headerShown:false}}/>

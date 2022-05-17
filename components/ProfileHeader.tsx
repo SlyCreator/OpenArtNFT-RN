@@ -17,7 +17,7 @@ const ProfileHeader = () => {
                     source={{ uri: 'https://picsum.photos/200/300' }}
                     style={tw`w-20 h-20 self-center -mt-10 mb-2 rounded-full`}
                 />
-                <View style={tw`items-center py-2`}>
+                <View style={tw`items-center `}>
                         <Text style={tw`font-bold text-lg`}>Gift Habeshaw</Text>
                         <Text>52fs5ge5g45sov45a <MaterialCommunityIcons name="content-copy" size={10} color="black" /></Text>
                     </View>
