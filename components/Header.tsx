@@ -6,11 +6,11 @@ import OpenArtSvg from './svgs/OpenArtSvg'
 const Header = () => {
     return (
         <View>
-            <View style={tw`justify-between flex-row`}>
-                        <OpenArtSvg />
-                        <Ionicons name="menu-outline" size={30} color="black" />
+            <View style={tw`justify-between flex-row px-4 pt-4`}>
+                <OpenArtSvg />
+                <Ionicons name="menu-outline" size={30} color="black" />
 
-                    </View>
+            </View>
         </View>
     )
 }
