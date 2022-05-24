@@ -85,14 +85,15 @@ const Header = (props: NativeStackHeaderProps) => {
 export function RootNavigator({ initialRouteName }: RootNavigationProps) {
   return (
     <Stack.Navigator >
-                  <Stack.Screen name="CreatorProfile" component={CreatorProfile}  options={{ headerShown: false }} />
-
-            <Stack.Screen name="EditProfile" component={EditProfileScreen}  options={{ headerShown: false }} />
-      <Stack.Screen name="Profile" component={ProfileScreen}  options={{ headerShown: false }} />
-      <Stack.Screen name="DiscoverCreator" component={DiscoverCreatorScreen} options={{headerShown:false}}/>
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="ItemDetails" component={ItemDetailsScreen} options={{headerShown:false}} />
+      <Stack.Screen name="CreatorProfile" component={CreatorProfile} options={{ headerShown: false }} />
+
+      <Stack.Screen name="EditProfile" component={EditProfileScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="DiscoverCreator" component={DiscoverCreatorScreen} options={{ headerShown: false }} />
+
+      <Stack.Screen name="ItemDetails" component={ItemDetailsScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Welcome" component={FirstScreen} options={{ headerShown: false }} />
-     </Stack.Navigator>
+    </Stack.Navigator>
   )
 }

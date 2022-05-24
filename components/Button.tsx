@@ -71,7 +71,9 @@ const Button = ({
       return AppTheme.primaryColor
     }
   }
-
+  // background: rgb(2,0,36);
+  // background: linear-gradient(72deg, rgba(2,0,36,1) 0%, rgba(30,30,85,1)
+  //  0%, rgba(24,21,195,1) 0%, rgba(231,4,228,1) 100%, rgba(0,212,255,1) 100%); 
   return (
     <TouchableOpacity
       onPress={onPress}

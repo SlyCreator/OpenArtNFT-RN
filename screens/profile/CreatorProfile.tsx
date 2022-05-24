@@ -1,4 +1,4 @@
-import { Feather, MaterialCommunityIcons, SimpleLineIcons } from '@expo/vector-icons'
+import { AntDesign, EvilIcons, Feather, MaterialCommunityIcons, SimpleLineIcons } from '@expo/vector-icons'
 import React from 'react'
 import { View, Text, ScrollView } from 'react-native'
 import tw from 'tailwind-react-native-classnames'
@@ -26,6 +26,18 @@ const CreatorProfile = () => {
                 <View style={tw`flex-row py-2`}>
                     <MaterialCommunityIcons name="link-variant" size={24} color="black" />
                     <Text style={tw`pl-4`}>OpenArt.design</Text>
+                </View>
+                <View style={tw`flex-row px-8 my-4 justify-between`}>
+                    <View style={tw`flex-row border rounded-md p-4 py-2`}>
+                        <EvilIcons name="heart" size={24} color="black" />
+                        <Text style={tw`text-base font-bold ml-2`}>Follow</Text>
+                    </View>
+                    <View style={tw`border rounded-full p-2`}>
+                        <AntDesign name="upload" size={18} color="black" />
+                    </View>
+                    <View style={tw`border rounded-full `}>
+                        <Text style={tw`font-bold text-base`}>..</Text>
+                    </View>
                 </View>
             </View>
         </ScrollView>
