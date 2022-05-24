@@ -7,16 +7,14 @@ import OpenArtSvg from '../components/svgs/OpenArtSvg'
 import { AntDesign } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
 import EtherscanSvg from '../components/EtherScanSvg'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 const ItemDetailsScreen = () => {
     return (
         <ScrollView style={{backgroundColor:'#EDEDED'}}showsVerticalScrollIndicator={false}>
-            <StackScreen style={{backgroundColor:'#EDEDED'}}>
-                <View>
-                    <View style={tw`justify-between flex-row`}>
-                        <OpenArtSvg />
-                        <Ionicons name="menu-outline" size={30} color="black" />
-
-                    </View>
+                <Header />
+                <View style={tw`p-4`}>
+                   
                     <View>
                         <Image source={{
                             uri: 'https://picsum.photos/id/15/200/300',
@@ -101,7 +99,7 @@ const ItemDetailsScreen = () => {
                         <View></View>
                     </View>
                 </View>
-            </StackScreen>
+            <Footer />
         </ScrollView>
 
     )

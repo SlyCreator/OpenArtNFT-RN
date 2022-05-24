@@ -42,21 +42,21 @@ export const MeduimProductCard = ({ name, imageUri, cost, onPress }: ProductCard
 export const LongProductCard = ({ name, imageUri, cost, onPress }: ProductCardProps) => {
     return (
         <TouchableOpacity style={tw` `} onPress={onPress}>
-            <View style={tw`shadow-lg p-2 bg-white rounded-xl`}>
+            <View style={tw`shadow-lg p-4 bg-white rounded-2xl`}>
                 <View>
                     <Image source={{
                         uri: 'https://picsum.photos/id/15/200/300',
                     }}
                         // style={tw`h-48 rounded-xl`}
                         style={{
-                            width: 300,
-                            height: 300,
-                            borderRadius: 12,
+                           // width: 300,
+                            height: 350,
+                            borderRadius: 15,
 
                         }}
                     />
                 </View>
-                <Text style={tw`text-lg py-2 font-bold`}>Silent Wave</Text>
+                <Text style={tw`text-2xl py-2 font-bold`}>Silent Wave</Text>
                 <View style={tw`flex-row justify-between pb-2`}>
                     <View style={tw`flex-row `}>
                         <Image source={{

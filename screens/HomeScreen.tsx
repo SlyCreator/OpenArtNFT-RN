@@ -13,6 +13,7 @@ import InputField from '../components/InputField'
 import { useState } from 'react'
 import Button from '../components/Button';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 
 const data = [
@@ -51,93 +52,91 @@ const HomeScreen = () => {
         dispatch(StackActions.push('ItemDetails'))
     }
     return (
-        <ScrollView style={tw` bg-white`} showsVerticalScrollIndicator={false}>
-            <StackScreen style={tw`flex-1 bg-white mx-2`}>
-                <View>
-                    <View style={tw`justify-between flex-row`}>
-                        <OpenArtSvg />
-                        <Ionicons name="menu-outline" size={30} color="black" />
-                    </View>
-                    <View>
-                        <Text style={tw`text-lg font-semibold text-center p-4 text-gray-600`}>Discover, collect, and sell</Text>
-                        <Text style={tw`text-xl font-bold  text-center `}>Your DIgital Art</Text>
-                    </View>
-                    <View>
-                        <InputField inputProps={{
-                            placeholder: 'Search items, collections, and accounts',
+        <ScrollView style={tw``} showsVerticalScrollIndicator={false}>
+            <Header />
+            <View style={tw`px-4`}>
 
-                            onChangeText: (search) => {
-                                setValue({ ...value, search })
-                            },
-                            keyboardType: 'email-address',
-                            textStyle: { fontSize: 16 },
-                            value: value.search,
-                            style: styles.input,
-                        }} />
-                    </View>
-                    <LongProductCard onPress={goToItemDetail} />
-                    <View style={tw`py-4 flex-row`}>
-                        <Text style={tw`text-base`}>Reserve Price </Text>
-                        <Text style={tw`font-bold text-xl`}> 1.50 ETH</Text>
-                    </View>
-                    <View>
-                        <Button
-                            title='Place a bid'
-                            titleStyle={{
-                                color: '#FFF',
-                                textTransform: 'none',
-                                fontSize: 14
-                            }}
-                        />
-                        <Button
-                            outline
-                            title='Login'
-                            titleStyle={{
-                                color: '#000',
-                                textTransform: 'none',
-                                fontSize: 14
-                            }}
-                        />
-                    </View>
-                    <View style={tw`flex-row`}>
-                            <Text style={tw`text-base font-bold`}>Live auctions</Text>
-                            <Button 
-                            outline
-                                title='Login'
-                                titleStyle={{
-                                    color:'#000',
-                                    textTransform:'none',
-                                    fontSize:14
-                                }}
-                            />
-                    </View>
-                    <View>
-                        <View>
-                            <LongProductCard  />
-                            <SoldForCard />
-                        </View>
-                    </View>
-                   
-                    <View>
-                        <Text>hot bid</Text>
-                    </View>
-                    <View>
-                        <Text>Hot Coolection</Text>
-                    </View>
-                    <View>
-                    <Button
-                            outline
-                            title='View more collection'
-                            titleStyle={{
-                                color: '#000',
-                                textTransform: 'none',
-                                fontSize: 14
-                            }}
-                        />
-                    </View>
-                  <Footer />          
+                <View>
+                    <Text style={tw`text-lg font-semibold text-center p-4 text-gray-600`}>Discover, collect, and sell</Text>
+                    <Text style={tw`text-xl font-bold  text-center `}>Your DIgital Art</Text>
                 </View>
-            </StackScreen>
+                <View>
+                    <InputField inputProps={{
+                        placeholder: 'Search items, collections, and accounts',
+
+                        onChangeText: (search) => {
+                            setValue({ ...value, search })
+                        },
+                        keyboardType: 'email-address',
+                        textStyle: { fontSize: 16 },
+                        value: value.search,
+                        style: styles.input,
+                    }} />
+                </View>
+                <LongProductCard onPress={goToItemDetail} />
+                <View style={tw`py-4 flex-row`}>
+                    <Text style={tw`text-base`}>Reserve Price </Text>
+                    <Text style={tw`font-bold text-xl`}> 1.50 ETH</Text>
+                </View>
+                <View>
+                    <Button
+                        title='Place a bid'
+                        titleStyle={{
+                            color: '#FFF',
+                            textTransform: 'none',
+                            fontSize: 14
+                        }}
+                    />
+                    <Button
+                        outline
+                        title='View artwork'
+                        titleStyle={{
+                            color: '#000',
+                            textTransform: 'none',
+                            fontSize: 14,
+                            fontWeight:'400'
+                        }}
+                    />
+                </View>
+                <View style={tw`flex-row`}>
+                    <Text style={tw`text-lg pt-3 font-bold`}>Live auctions</Text>
+                    <Button
+                        outline
+                        title='View all'
+                        titleStyle={{
+                            color: '#000',
+                            textTransform: 'none',
+                            fontSize: 14
+                        }}
+                    />
+                </View>
+                <View>
+                    <View>
+                        <LongProductCard />
+                        <SoldForCard />
+                    </View>
+                </View>
+
+                <View>
+                    <Text>hot bid</Text>
+                </View>
+                <View>
+                    <Text>Hot Coolection</Text>
+                </View>
+                <View>
+                    <Button
+                        outline
+                        title='View more collection'
+                        titleStyle={{
+                            color: '#000',
+                            textTransform: 'none',
+                            fontSize: 14
+                        }}
+                    />
+                </View>
+
+            </View>
+            <Footer />
         </ScrollView>
     )
 }
